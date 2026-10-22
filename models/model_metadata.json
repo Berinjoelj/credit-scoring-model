@@ -1,0 +1,265 @@
+{
+    "best_model_name": "Logistic Regression",
+    "dataset_name": "German Credit Data (Statlog credit-g, OpenML ID 31)",
+    "sample_count": 1000,
+    "random_state": 42,
+    "test_size": 0.2,
+    "target_mapping": {
+        "0": "Good (Creditworthy / Low Risk)",
+        "1": "Bad (High Risk / Potential Defaulter)"
+    },
+    "numerical_columns": [
+        "duration",
+        "credit_amount",
+        "installment_commitment",
+        "residence_since",
+        "age",
+        "existing_credits",
+        "num_dependents"
+    ],
+    "categorical_columns": [
+        "checking_status",
+        "credit_history",
+        "purpose",
+        "savings_status",
+        "employment",
+        "personal_status",
+        "other_parties",
+        "property_magnitude",
+        "other_payment_plans",
+        "housing",
+        "job",
+        "own_telephone",
+        "foreign_worker"
+    ],
+    "category_options": {
+        "checking_status": [
+            "0<=X<200",
+            "<0",
+            ">=200",
+            "no checking"
+        ],
+        "credit_history": [
+            "all paid",
+            "critical/other existing credit",
+            "delayed previously",
+            "existing paid",
+            "no credits/all paid"
+        ],
+        "purpose": [
+            "business",
+            "domestic appliance",
+            "education",
+            "furniture/equipment",
+            "new car",
+            "other",
+            "radio/tv",
+            "repairs",
+            "retraining",
+            "used car"
+        ],
+        "savings_status": [
+            "100<=X<500",
+            "500<=X<1000",
+            "<100",
+            ">=1000",
+            "no known savings"
+        ],
+        "employment": [
+            "1<=X<4",
+            "4<=X<7",
+            "<1",
+            ">=7",
+            "unemployed"
+        ],
+        "personal_status": [
+            "female div/dep/mar",
+            "male div/sep",
+            "male mar/wid",
+            "male single"
+        ],
+        "other_parties": [
+            "co applicant",
+            "guarantor",
+            "none"
+        ],
+        "property_magnitude": [
+            "car",
+            "life insurance",
+            "no known property",
+            "real estate"
+        ],
+        "other_payment_plans": [
+            "bank",
+            "none",
+            "stores"
+        ],
+        "housing": [
+            "for free",
+            "own",
+            "rent"
+        ],
+        "job": [
+            "high qualif/self emp/mgmt",
+            "skilled",
+            "unemp/unskilled non res",
+            "unskilled resident"
+        ],
+        "own_telephone": [
+            "none",
+            "yes"
+        ],
+        "foreign_worker": [
+            "no",
+            "yes"
+        ]
+    },
+    "numerical_ranges": {
+        "duration": {
+            "min": 4.0,
+            "max": 72.0,
+            "median": 18.0,
+            "mean": 20.903
+        },
+        "credit_amount": {
+            "min": 250.0,
+            "max": 18424.0,
+            "median": 2319.5,
+            "mean": 3271.258
+        },
+        "installment_commitment": {
+            "min": 1.0,
+            "max": 4.0,
+            "median": 3.0,
+            "mean": 2.973
+        },
+        "residence_since": {
+            "min": 1.0,
+            "max": 4.0,
+            "median": 3.0,
+            "mean": 2.845
+        },
+        "age": {
+            "min": 19.0,
+            "max": 75.0,
+            "median": 33.0,
+            "mean": 35.546
+        },
+        "existing_credits": {
+            "min": 1.0,
+            "max": 4.0,
+            "median": 1.0,
+            "mean": 1.407
+        },
+        "num_dependents": {
+            "min": 1.0,
+            "max": 2.0,
+            "median": 1.0,
+            "mean": 1.155
+        }
+    },
+    "top_features": [
+        {
+            "feature": "checking_status_no checking",
+            "score": -0.9746896804931955
+        },
+        {
+            "feature": "purpose_education",
+            "score": 0.9219058331028488
+        },
+        {
+            "feature": "purpose_used car",
+            "score": -0.8663713707945201
+        },
+        {
+            "feature": "credit_history_critical/other existing credit",
+            "score": -0.8362498249688891
+        },
+        {
+            "feature": "savings_status_>=1000",
+            "score": -0.6434905333707944
+        },
+        {
+            "feature": "foreign_worker_no",
+            "score": -0.6245589307907892
+        },
+        {
+            "feature": "checking_status_<0",
+            "score": 0.6182821641764412
+        },
+        {
+            "feature": "property_magnitude_no known property",
+            "score": 0.6104835560811926
+        },
+        {
+            "feature": "employment_4<=X<7",
+            "score": -0.5821531373896011
+        },
+        {
+            "feature": "savings_status_<100",
+            "score": 0.5762101483706807
+        }
+    ],
+    "models_benchmarked": [
+        {
+            "Model": "Logistic Regression",
+            "CV_AUC_Mean": 0.7701264880952381,
+            "CV_Recall_Mean": 0.6833333333333333,
+            "Test_Accuracy": 0.75,
+            "Test_Precision": 0.5581395348837209,
+            "Test_Recall": 0.8,
+            "Test_F1": 0.6575342465753424,
+            "Test_ROC_AUC": 0.8060714285714285,
+            "True_Negatives": 102,
+            "False_Positives": 38,
+            "False_Negatives": 12,
+            "True_Positives": 48,
+            "Business_Risk_Score": 98
+        },
+        {
+            "Model": "Gradient Boosting",
+            "CV_AUC_Mean": 0.7847470238095238,
+            "CV_Recall_Mean": 0.475,
+            "Test_Accuracy": 0.775,
+            "Test_Precision": 0.6530612244897959,
+            "Test_Recall": 0.5333333333333333,
+            "Test_F1": 0.5871559633027523,
+            "Test_ROC_AUC": 0.7925000000000001,
+            "True_Negatives": 123,
+            "False_Positives": 17,
+            "False_Negatives": 28,
+            "True_Positives": 32,
+            "Business_Risk_Score": 157
+        },
+        {
+            "Model": "Random Forest",
+            "CV_AUC_Mean": 0.7916666666666667,
+            "CV_Recall_Mean": 0.7000000000000001,
+            "Test_Accuracy": 0.7,
+            "Test_Precision": 0.5,
+            "Test_Recall": 0.7333333333333333,
+            "Test_F1": 0.5945945945945946,
+            "Test_ROC_AUC": 0.7866666666666667,
+            "True_Negatives": 96,
+            "False_Positives": 44,
+            "False_Negatives": 16,
+            "True_Positives": 44,
+            "Business_Risk_Score": 124
+        },
+        {
+            "Model": "Decision Tree",
+            "CV_AUC_Mean": 0.6932663690476191,
+            "CV_Recall_Mean": 0.7375,
+            "Test_Accuracy": 0.58,
+            "Test_Precision": 0.39090909090909093,
+            "Test_Recall": 0.7166666666666667,
+            "Test_F1": 0.5058823529411764,
+            "Test_ROC_AUC": 0.63375,
+            "True_Negatives": 73,
+            "False_Positives": 67,
+            "False_Negatives": 17,
+            "True_Positives": 43,
+            "Business_Risk_Score": 152
+        }
+    ]
+}
